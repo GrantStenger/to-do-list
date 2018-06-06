@@ -1,4 +1,3 @@
-
 <?php
 include 'password.php';
 
@@ -13,7 +12,6 @@ if (!$con) {
 
 $sql = "SELECT * FROM ToDos";
 $result = mysqli_query($con, $sql);
-// $result = $con->query($sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
