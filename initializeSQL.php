@@ -15,12 +15,12 @@ if (!$conn) {
 echo "Connected successfully\n";
 
 // Create database
-$sql = "CREATE DATABASE ToDoListDB";
-if (mysqli_query($conn, $sql)) {
-    echo "Database created successfully\n";
-} else {
-    echo "Error creating database: " . mysqli_error($conn);
-}
+// $sql = "CREATE DATABASE ToDoListDB";
+// if (mysqli_query($conn, $sql)) {
+//     echo "Database created successfully\n";
+// } else {
+//     echo "Error creating database: " . mysqli_error($conn);
+// }
 
 // sql to create table
 $sql = "CREATE TABLE ToDos (
