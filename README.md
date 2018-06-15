@@ -6,3 +6,5 @@ Fourth, have fun.
 To Do's for me:
 Clear "New task bar" after adding a task
 Make able to add task with enter
+
+lil bootstrap too

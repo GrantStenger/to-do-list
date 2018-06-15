@@ -3,6 +3,7 @@
 <head>
 	<title>Grant's To Do List</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -11,14 +12,21 @@
 		<input type="text" id="myInput" placeholder="Task Name...">
 		<span onclick="addTask()" id="addBtn">Add</span>
 	</div>
-	<ul id='ToDoUL'></ul>
-
-	<br>
-
 	<div class="divTable" id="myTable"></div>
-
-	<script src="sortTable.js"></script>
-
+	<br>
+	<br>
+	<div class="input-group">
+		<h2 style="margin:5px">My To Do List</h2>
+		<input type="text" class="form-control" placeholder="Task Name...">
+		<input type="text" class="form-control" placeholder="Effort...">
+		<input type="text" class="form-control" placeholder="Urgency...">
+		<input type="text" class="form-control" placeholder="Importance...">
+		<input type="text" class="form-control" placeholder="Significance...">
+		<input type="text" class="form-control" placeholder="Enjoyability...">
+		<div class="input-group-append">
+			<button class="btn btn-outline-secondary" type="button">Add</button>
+		</div>
+	</div>
 	<script src="scripts.js"></script>
 </body>
 </html>
