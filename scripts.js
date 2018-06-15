@@ -14,7 +14,7 @@ function loadTable() {
 	};
 	xmlhttp.open("GET","makeTable.php",true);
 	xmlhttp.send();
-	sortTable(7);
+	// sortTable(7);
 }
 
 loadTable();
@@ -22,8 +22,43 @@ loadTable();
 console.log(document);
 
 // Tigger Add Button when enter is pressed
-var input = document.getElementById("myInput");
-input.addEventListener("keyup", function(event) {
+var taskInput = document.getElementById("taskInput");
+taskInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addBtn").click();
+    }
+});
+var effortInput = document.getElementById("effortInput");
+effortInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addBtn").click();
+    }
+});
+var urgencyInput = document.getElementById("urgencyInput");
+urgencyInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addBtn").click();
+    }
+});
+var importanceInput = document.getElementById("importanceInput");
+importanceInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addBtn").click();
+    }
+});
+var significanceInput = document.getElementById("significanceInput");
+significanceInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addBtn").click();
+    }
+});
+var enjoyabilityInput = document.getElementById("enjoyabilityInput");
+enjoyabilityInput.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
         document.getElementById("addBtn").click();
@@ -32,8 +67,13 @@ input.addEventListener("keyup", function(event) {
 
 // Create a new list item when clicking on the "Add" button
 function addTask() {
-	var inputValue = document.getElementById("myInput").value;
-	if (inputValue != "") {
+	var taskInput = document.getElementById("taskInput").value;
+	var effortInput = document.getElementById("effortInput").value;
+	var urgencyInput = document.getElementById("urgencyInput").value;
+	var importanceInput = document.getElementById("importanceInput").value;
+	var significanceInput = document.getElementById("significanceInput").value;
+	var enjoyabilityInput = document.getElementById("enjoyabilityInput").value;
+	if (taskInput != "" & effortInput != "" & urgencyInput != "" & importanceInput != "" & significanceInput != "" & enjoyabilityInput != "") {
 		if (window.XMLHttpRequest) {
 			// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp = new XMLHttpRequest();
@@ -41,9 +81,14 @@ function addTask() {
 			// code for IE6, IE5
 			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET","addTask.php?q="+inputValue, true);
+		xmlhttp.open("GET","addTask.php?task="+taskInput+"&effort="+effortInput+"&urgency="+urgencyInput+"&importance="+importanceInput+"&significance="+significanceInput+"&enjoyability="+enjoyabilityInput, true);
 		xmlhttp.send();
-		document.getElementById("myInput").value = "";
+		document.getElementById("taskInput").value = "";
+		document.getElementById("effortInput").value = "";
+		document.getElementById("urgencyInput").value = "";
+		document.getElementById("importanceInput").value = "";
+		document.getElementById("significanceInput").value = "";
+		document.getElementById("enjoyabilityInput").value = "";
 		loadTable();
 	}
 }

@@ -7,26 +7,21 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div id="myDIV" class="header">
-		<h2 style="margin:5px">My To Do List</h2>
-		<input type="text" id="myInput" placeholder="Task Name...">
-		<span onclick="addTask()" id="addBtn">Add</span>
-	</div>
-	<div class="divTable" id="myTable"></div>
-	<br>
-	<br>
-	<div class="input-group">
-		<h2 style="margin:5px">My To Do List</h2>
-		<input type="text" class="form-control" placeholder="Task Name...">
-		<input type="text" class="form-control" placeholder="Effort...">
-		<input type="text" class="form-control" placeholder="Urgency...">
-		<input type="text" class="form-control" placeholder="Importance...">
-		<input type="text" class="form-control" placeholder="Significance...">
-		<input type="text" class="form-control" placeholder="Enjoyability...">
-		<div class="input-group-append">
-			<button class="btn btn-outline-secondary" type="button">Add</button>
+	<div class="header">
+		<h2>My To Do List</h2>
+		<div class="input-group">
+			<input type="text" class="form-control" id="taskInput" placeholder="Task Name...">
+			<input type="text" class="form-control" id="effortInput" placeholder="Effort...">
+			<input type="text" class="form-control" id="urgencyInput" placeholder="Urgency...">
+			<input type="text" class="form-control" id="importanceInput" placeholder="Importance...">
+			<input type="text" class="form-control" id="significanceInput" placeholder="Significance...">
+			<input type="text" class="form-control" id="enjoyabilityInput" placeholder="Enjoyability...">
+			<div class="input-group-append">
+				<button onclick="addTask()" id="addBtn" type="button">Add</button>
+			</div>
 		</div>
 	</div>
+	<div class="divTable" id="myTable"></div>
 	<script src="scripts.js"></script>
 </body>
 </html>

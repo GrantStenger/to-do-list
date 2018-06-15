@@ -1,8 +1,14 @@
 <?php
 include 'password.php';
 
-$q = $_GET['q'];
-echo $q;
+$task = $_GET['task'];
+$effort = $_GET['effort'];
+$urgency = $_GET['urgency'];
+$importance = $_GET['importance'];
+$significance = $_GET['significance'];
+$enjoyability = $_GET['enjoyability'];
+
+$rating = 10*((1 - $effort/10) + ($urgency/10) + ($importance/10) + 2*($significance/10) + ($enjoyability/10))/6;
 
 $servername = "127.0.0.1";
 $username = "root";
@@ -14,7 +20,7 @@ if (!$con) {
 }
 
 $sql = "INSERT INTO ToDos (task, effort, urgency, importance, significance, enjoyability, rating, completed)
-VALUES ('" . $q . "', 3, 4, 5, 6, 7, 6, 0)";
+VALUES ('" . $task . "', " . $effort . ", " . $urgency . ", " . $importance . ", " . $significance . ", " . $enjoyability . ", " . $rating . ", 0)";
 
 if (mysqli_query($con, $sql)) {
     echo "New record created successfully";
