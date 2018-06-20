@@ -15,6 +15,7 @@ function loadTable() {
 	xmlhttp.open("GET","makeTable.php",true);
 	xmlhttp.send();
 	// sortTable(7);
+	sortTable(7);
 }
 
 loadTable();

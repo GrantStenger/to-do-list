@@ -8,7 +8,7 @@ $importance = $_GET['importance'];
 $significance = $_GET['significance'];
 $enjoyability = $_GET['enjoyability'];
 
-$rating = 10*((1 - $effort/10) + ($urgency/10) + ($importance/10) + 2*($significance/10) + ($enjoyability/10))/6;
+$rating = 10*((1 - $effort/10) + ($urgency/10) + ($importance/10) + 2*($significance/10) + ($enjoyability/20))/5.5;
 
 $servername = "127.0.0.1";
 $username = "root";
