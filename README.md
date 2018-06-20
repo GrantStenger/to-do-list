@@ -1,6 +1,8 @@
 # Grant's Multi-Dimensional To-Do List
 Takes in task name, urgency, effort, importance, significance, and enjoyability as paramaters and sorts tasks based on an optimal weighting of these.
 
+Idea inspired by the Eisenhower Matrix and [Rory Vaden's TED Talk](https://www.youtube.com/watch?v=y2X7c9TUQJ8).
+
 ### Effort: How long will it take?
 1. 1 minute of work
 2. 5 minutes of work
