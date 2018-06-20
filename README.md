@@ -25,12 +25,16 @@ Takes in task name, urgency, effort, importance, significance, and enjoyability 
 9. Next hour
 10. Within minutes
 
-### Importance: How serious are the immediate consequences?
-1. No consequences 
-3. Should be done but, eh, doesn’t really matter
-5. Needs to be done
+### Importance: How serious are the immediate consequences / rewards?
+1. No consequence
+2. Marginally worth doing
+3. Would be good to do, but doesn’t really matter
+4. Would be good to do
+5. Should be done
+6. Needs to be done
 7. Seriously needs to be done
-8. Painful / Ashamed if not done
+8. Will be ashamed if not done
+8. Painful if not done
 10. Life threatening
 
 ### Significance: How long will this matter? Will this multiply my time? Will this create more time for me?
