@@ -7,7 +7,7 @@ $password = $PASSWORD;
 $dbname = "ToDoListDB";
 $con = mysqli_connect($servername, $username, $password, $dbname);
 if (!$con) {
-	die('Could not connect: ' . mysqli_error($con));
+    die('Could not connect: ' . mysqli_error($con));
 }
 
 $sql = "SELECT * FROM ToDos";
@@ -58,5 +58,4 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($con);
-// <li id=3>"Feed Apollo"<span class='close' onclick='deleteTask(3)'>×</span></li>;
 ?>

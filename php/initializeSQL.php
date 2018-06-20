@@ -61,4 +61,3 @@ addRow($conn, "Eat lunch", 6, 4, 5, 3, 7, false);
 
 $conn->close();
 ?>
-

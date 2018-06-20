@@ -1,4 +1,3 @@
-
 function loadTable() {
 	if (window.XMLHttpRequest) {
 		// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -12,59 +11,10 @@ function loadTable() {
 			document.getElementById("myTable").innerHTML = this.responseText;
 		}
 	};
-	xmlhttp.open("GET","makeTable.php",true);
+	xmlhttp.open("GET","php/makeTable.php",true);
 	xmlhttp.send();
 	// sortTable(7);
-	sortTable(7);
 }
-
-loadTable();
-
-console.log(document);
-
-// Tigger Add Button when enter is pressed
-var taskInput = document.getElementById("taskInput");
-taskInput.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addBtn").click();
-    }
-});
-var effortInput = document.getElementById("effortInput");
-effortInput.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addBtn").click();
-    }
-});
-var urgencyInput = document.getElementById("urgencyInput");
-urgencyInput.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addBtn").click();
-    }
-});
-var importanceInput = document.getElementById("importanceInput");
-importanceInput.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addBtn").click();
-    }
-});
-var significanceInput = document.getElementById("significanceInput");
-significanceInput.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addBtn").click();
-    }
-});
-var enjoyabilityInput = document.getElementById("enjoyabilityInput");
-enjoyabilityInput.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addBtn").click();
-    }
-});
 
 // Create a new list item when clicking on the "Add" button
 function addTask() {
@@ -82,7 +32,7 @@ function addTask() {
 			// code for IE6, IE5
 			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET","addTask.php?task="+taskInput+"&effort="+effortInput+"&urgency="+urgencyInput+"&importance="+importanceInput+"&significance="+significanceInput+"&enjoyability="+enjoyabilityInput, true);
+		xmlhttp.open("GET","php/addTask.php?task="+taskInput+"&effort="+effortInput+"&urgency="+urgencyInput+"&importance="+importanceInput+"&significance="+significanceInput+"&enjoyability="+enjoyabilityInput, true);
 		xmlhttp.send();
 		document.getElementById("taskInput").value = "";
 		document.getElementById("effortInput").value = "";
@@ -102,7 +52,7 @@ function deleteTask(id) {
 		// code for IE6, IE5
 		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
-	xmlhttp.open("GET","deleteTask.php?q="+id, true);
+	xmlhttp.open("GET","php/deleteTask.php?q="+id, true);
 	xmlhttp.send();
 	loadTable();
 }
@@ -115,7 +65,7 @@ function completeTask(id) {
 		// code for IE6, IE5
 		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
-	xmlhttp.open("GET","completeTask.php?q="+id, true);
+	xmlhttp.open("GET","php/completeTask.php?q="+id, true);
 	xmlhttp.send();
 	loadTable();
 }
@@ -174,3 +124,55 @@ function sortTable(n) {
 		}
 	}
 }
+
+function main() {
+
+	// Initially load table
+	loadTable();
+
+	// Tigger Add Button when enter is pressed
+	var taskInput = document.getElementById("taskInput");
+	taskInput.addEventListener("keyup", function(event) {
+	    event.preventDefault();
+	    if (event.keyCode === 13) {
+	        document.getElementById("addBtn").click();
+	    }
+	});
+	var effortInput = document.getElementById("effortInput");
+	effortInput.addEventListener("keyup", function(event) {
+	    event.preventDefault();
+	    if (event.keyCode === 13) {
+	        document.getElementById("addBtn").click();
+	    }
+	});
+	var urgencyInput = document.getElementById("urgencyInput");
+	urgencyInput.addEventListener("keyup", function(event) {
+	    event.preventDefault();
+	    if (event.keyCode === 13) {
+	        document.getElementById("addBtn").click();
+	    }
+	});
+	var importanceInput = document.getElementById("importanceInput");
+	importanceInput.addEventListener("keyup", function(event) {
+	    event.preventDefault();
+	    if (event.keyCode === 13) {
+	        document.getElementById("addBtn").click();
+	    }
+	});
+	var significanceInput = document.getElementById("significanceInput");
+	significanceInput.addEventListener("keyup", function(event) {
+	    event.preventDefault();
+	    if (event.keyCode === 13) {
+	        document.getElementById("addBtn").click();
+	    }
+	});
+	var enjoyabilityInput = document.getElementById("enjoyabilityInput");
+	enjoyabilityInput.addEventListener("keyup", function(event) {
+	    event.preventDefault();
+	    if (event.keyCode === 13) {
+	        document.getElementById("addBtn").click();
+	    }
+	});
+}
+
+main()
